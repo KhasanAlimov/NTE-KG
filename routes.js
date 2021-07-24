@@ -9,4 +9,12 @@ module.exports = (app) => {
     });
   });
 
+  app.get('/about-us', (req, res) => {
+    res.render('pages/aboutUs', {
+      title: 'About us',
+      isHome: true,
+      cssLink: 'assets/css/aboutUs.css'
+    });
+  });
+
 };
