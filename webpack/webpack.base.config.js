@@ -15,18 +15,18 @@ module.exports = {
   entry: {
     home: `${Paths.src}/js/home.js`,
     aboutUs: `${Paths.src}/js/aboutUs.js`,
-    main: `${Paths.src}/index.js`
+    // main: `${Paths.src}/index.js`
   },
   output: {
     filename: `${Paths.assets}js/[name].js`,
     path: Paths.dist,
     publicPath: "",
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //   },
+  // },
   module: {
     rules: [
       {
@@ -50,7 +50,7 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: `[path][name]_[contenthash:8].[ext]`,
-          context: path.resolve(__dirname, "src/"),
+          context: "src/",
           outputPath: 'assets/',
           publicPath: '../',
           useRelativePaths: true,
