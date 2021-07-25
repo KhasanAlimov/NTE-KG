@@ -1,7 +1,7 @@
 {
-  "name": "demo-post",
+  "name": "nte-kg",
   "version": "1.0.0",
-  "description": "Сайт для демостративных постов",
+  "description": "Сайт направленный на туризме и путешествие",
   "main": "server.js",
   "scripts": {
     "start": "concurrently --kill-others \"npm run build\" \"npm run ndmon\"",

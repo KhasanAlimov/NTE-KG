@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const copyWebpackPlugin = require("copy-webpack-plugin");
-const htmlWebpackPlugin = require("html-webpack-plugin");
 
 const Paths = {
   src: path.join(__dirname, "../src"),
@@ -39,9 +38,9 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[path][name].[ext]",
-          context: path.resolve(__dirname, "src/"),
+          context: "src/",
           outputPath: 'assets/',
-          publicPath: '../',
+          publicPath: "../",
           useRelativePaths: true,
         },
       },
