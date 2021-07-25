@@ -1,3 +1,8 @@
+@import "./utils/vars.scss";
+@import "./utils/mixins.scss";
+@import "./utils/font-face.scss";
+
 body {
-    background: green;
+    background: url('../img/Home/home-header-bg.jpg');
+    font-family: 'Montserrat_500', Arial;
 }
