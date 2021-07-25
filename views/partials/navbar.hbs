@@ -1,24 +1,42 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark" id="top_navbar">
-  <div class="container-fluid container">
-      <a class="navbar-brand" href="/">
-        <img src="" alt="" class="logo">
-      </a>
+<nav class="navbar row m-0" id="top_navbar">
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link
-            {{#if isHome}}
-              active
-            {{/if}}
-          " aria-current="page" href="/">Главная</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link
-            {{#if isContacts}}
-              active
-            {{/if}}
-          " href="/contacts">Контакты</a>
-        </li>
-      </ul>
+  <div class="left-nav col-md-5 d-flex justify-content-between">
+    <div class="language-switch col-md-3">
+      <span>Eng</span>
+    </div>
+
+    <ul class="navbar-nav col-md-9 d-flex justify-content-around">
+      <li class="nav-item">
+        <a class="nav-link
+          {{#if isaboutUs}}
+            active
+          {{/if}}
+        " href="/about-us">About us</a>
+      </li>
+      <li class="nav-item">Rents</li>
+    </ul>
+  </div>
+
+  <div class="logo-block col-md-2">
+    <a class="navbar-brand" href="/">
+      <img src="assets/icons/NTE-header-logo.svg" alt="NTE kg logo" class="logo">
+    </a>
+  </div>
+
+  <div class="right-nav col-md-5 d-flex justify-content-between">
+    <ul class="navbar-nav col-md-9 d-flex justify-content-around">
+      <li class="nav-item">Tours</li>
+      <li class="nav-item">
+        <a class="nav-link
+          {{#if isContacts}}
+            active
+          {{/if}}
+        " href="/contacts">Contacts</a>
+      </li>
+    </ul>
+
+    <div class="burger-menu col-md-3">
+      <img src="assets/icons/Menu.svg" alt="Burger icon svg">
+    </div>
   </div>
 </nav>
