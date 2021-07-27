@@ -1,0 +1,27 @@
+footer {
+  img {
+    width: 96%;
+  }
+  h4 {
+    font-family: 'Roboto_700', sans-serif;
+    font-size: 1.2rem;
+    line-height: 20px;
+    color: #506275;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto_500', sans-serif;
+    line-height: 28px;
+  }
+  a:hover {
+    color: rgba(255, 255, 255, 0.44);
+    transition: color 0.3s;
+    }
+  .address {
+    margin: 1rem 0 0 0;
+    font-size: 0.9rem;
+    font-family: 'Montserrat_300', sans-serif;
+    line-height: 24px;
+  }
+  }
