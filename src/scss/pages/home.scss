@@ -1,0 +1,21 @@
+main#home {
+  header {
+    background: url("../img/Home/home-header-bg.jpg") no-repeat center;
+
+    .headline {
+      // font-size: 120px;
+      @include font-size(8em, 25);
+      font-family: "Caveat_400", sans-serif;
+    }
+
+    .subtitle {
+      font-family: "Montserrat_500", sans-serif;
+    }
+  }
+
+  section.engineering {
+    .heading {
+      color: #697078;
+    }
+  }
+}
