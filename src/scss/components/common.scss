@@ -1,4 +1,12 @@
-@import "../utils/vars.scss";
-@import "../utils/mixins.scss";
-@import "../utils/font-face.scss";
-@import "./navbar.scss";
+header {
+  background-size: cover !important;
+  height: 100vh;
+
+  @include screen("lg") {
+    height: 75vh;
+  }
+
+  @include screen("sm") {
+    height: 50vh !important;
+  }
+}

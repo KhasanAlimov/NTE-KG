@@ -1,0 +1,14 @@
+// Utils
+@import "./utils/vars.scss";
+@import "./utils/mixins.scss";
+@import "./utils/font-face.scss";
+
+// Components
+@import "./components/navbar.scss";
+@import "./components/footer.scss";
+@import "./components/common.scss";
+
+// Pages
+@import "./pages/home.scss";
+@import "./pages/aboutUs.scss";
+@import "./pages/housing.scss";

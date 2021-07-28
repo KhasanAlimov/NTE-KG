@@ -21,3 +21,18 @@
     @error 'Не указано значение для `#{$breakpoint}`';
   }
 }
+
+// Автоматическое уменьшение размера шрифта
+@mixin font-size($num, $percent) {
+  font-size: $num;
+
+  $screens: md, sm, xs;
+
+  @each $screen in $screens {
+    $percent: $percent + ($percent / 100 * 30);
+  
+    @include screen("#{$screen}") {
+      font-size: $num - ($num / 100 * $percent);
+    }
+  }
+}
