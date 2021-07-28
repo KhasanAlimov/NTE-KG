@@ -16,5 +16,4 @@ module.exports = (app) => {
       cssLink: 'assets/css/aboutUs.css'
     });
   });
-
 };
