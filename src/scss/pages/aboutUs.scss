@@ -1,11 +1,17 @@
+main#about-us {
+  header {
+    background: url("../img/About-us/aboutUs-header-bg.jpg") no-repeat center;
+  }
 
-#header {
-.container {
-  .headline {
-    font-size: 5em;
+  section {
+    @extend .subtitle;
+    margin-top: 5em;
   }
-  .after_headline {
-    font-size: 2em;
+
+  section.description {
+    @media screen and (min-width: 998px) {
+      width: 900px;
+    }
+
   }
-}
 }

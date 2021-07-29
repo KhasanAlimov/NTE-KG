@@ -1,0 +1,50 @@
+{
+  "homePage": {
+		"services": [
+			{
+				"icon": "truck-icon.svg",
+				"title": "car rent",
+				"pageLink": "off-road-cars"
+			},
+			{
+				"icon": "mountain-icon.svg",
+				"title": "tours",
+				"pageLink": "tours"
+			},
+			{
+				"icon": "morcycle-helmet-icon.svg",
+				"title": "motorcycle rent",
+				"pageLink": "Off-road-motorcycles"
+			},
+			{
+				"icon": "engineering-icon.svg",
+				"title": "repair shop",
+				"pageLink": "repair-shop"
+			},
+			{
+				"icon": "avatar-icon.svg",
+				"title": "about us",
+				"pageLink": "about-us"
+			}
+		],
+		"countries": [
+			{
+				"bgImage": "about-kyrgyzstan.jpg",
+				"name": "kyrgyzstan"
+			},
+			{
+				"bgImage": "about-tajikistan.jpg",
+				"name": "tajikistan"
+			},
+			{
+				"bgImage": "about-mongolia.jpg",
+				"name": "mongolia"
+			},
+			{
+				"bgImage": "about-china.jpg",
+				"name": "china"
+			}
+		]
+	},
+  "name": "Name"
+}
