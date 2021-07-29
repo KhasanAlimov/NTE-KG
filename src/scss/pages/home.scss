@@ -3,19 +3,104 @@ main#home {
     background: url("../img/Home/home-header-bg.jpg") no-repeat center;
 
     .headline {
-      // font-size: 120px;
       @include font-size(8em, 25);
       font-family: "Caveat_400", sans-serif;
     }
+  }
 
-    .subtitle {
-      font-family: "Montserrat_500", sans-serif;
+  section.services-section {
+    .services {
+      .service {
+        color: #697078;
+        justify-items: center;
+
+        &:hover {
+          background: rgba(238, 238, 238, 0.932);
+        }
+
+        img {
+          @include screen("sm") {
+            width: 75%;
+          }
+        }
+        p {
+          font-family: "Montserrat_400", sans-serif;
+          white-space: nowrap;
+
+          @include font-size(1em, 12);
+        }
+      }
     }
   }
 
-  section.engineering {
-    .heading {
-      color: #697078;
+  section.countries {
+    .main-countries-block {
+      &:nth-child(4n + 1) {
+        .decoration {
+          top: -15%;
+          left: -3%;
+        }
+      }
+      &:nth-child(4n + 2) {
+        .decoration {
+          top: -10%;
+          right: -5%;
+        }
+      }
+      &:nth-child(4n + 3) {
+        .decoration {
+          bottom: -11%;
+          left: -4%;
+        }
+      }
+      &:nth-child(4n + 4) {
+        .decoration {
+          bottom: -8%;
+          right: -3%;
+        }
+      }
+    }
+
+    .countries-container {
+      .decoration {
+        width: 25%;
+        height: 70%;
+        background: rgba(168, 198, 221, 0.33);
+        border-radius: 25%;
+        z-index: 0;
+      }
+
+      .country {
+        background-repeat: no-repeat;
+        background-size: 102% auto;
+        background-position: center;
+        height: 25vw;
+        max-height: 400px;
+        min-height: 110px;
+        position: relative;
+        z-index: 1;
+
+        .overlay {
+          // filter: none;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: #00000075;
+          z-index: 0;
+        }
+
+        @include screen("sm") {
+          justify-content: center;
+          padding-left: 0 !important;
+        }
+
+        a {
+          font-family: "Roboto_500", sans-serif;
+          width: 200px;
+          z-index: 1;
+        }
+      }
     }
   }
 }

@@ -4,10 +4,35 @@
     <h2 class="subtitle display-6">Discover with us</h2>
   </header>
 
-  <section class="engineering mt-5">
-    <h3 class="heading text-center">Nature travel and engineering</h3>
-    <div>
-        
+  <section class="services-section mt-5 mxW-1400 mx-auto">
+    <h4 class="subtitle text-center">Nature travel and engineering</h4>
+    <div class="services row justify-content-lg-between justify-content-around my-5 mx-auto wz-90">
+      {{#each homePageData.services}}
+        <a href="/{{pageLink}}" class="service py-3 justify-content-center my-4 col-lg-2 col-md-4 col-5 d-grid gap-4">
+          <img class="mw-100 align-self-center" src="assets/icons/home/{{icon}}" alt="{{title}}">
+          <p class="m-0 align-self-end text-center">{{title}}</p>
+        </a>
+      {{/each}}
     </div>
+  </section>
+
+  <section class="countries mxW-1400 mx-auto">
+    <h4 class="subtitle text-center mb-5">Countries we visit</h4>
+
+    <div class="countries-container wz-90 mx-auto d-grid gap-5 px-md-5">
+      {{#each homePageData.countries}}
+      <div class="main-countries-block position-relative">
+        <div class="decoration position-absolute"></div>
+        <div class="country rounded-pill ps-5 pb-2 pb-sm-4 d-flex align-items-end" style="background-image: url(assets/img/Home/{{bgImage}});">
+          <a href="/about-{{name}}" class="position-relative light-limp-bg text-center py-2 text-dark rounded-pill ms-sm-5">about-{{name}}</a>
+          <div class="overlay position-absolute rounded-pill"></div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="map-of-kyrgyzstan my-5 mxW-1400 wz-90 mx-auto text-center py-5">
+    <img class="mw-100" src="assets/icons/home/Kyrgyzstan.svg" alt="Kyrgyzstan svg map">
   </section>
 </main>

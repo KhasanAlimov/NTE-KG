@@ -1,0 +1,9 @@
+main#motorcycles {
+	header {
+		background: url("../img/Of-road/motorcycles-header-bg.jpg") no-repeat center;
+
+		.headline {
+			@include font-size(4em, 25);
+		}
+	}
+}
