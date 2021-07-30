@@ -1,0 +1,24 @@
+<main id="tours" class="text-center">
+  <header  class="text-light d-flex flex-column justify-content-center">
+    <h1 class="headline">Tours</h1>
+    <h2 class="subtitle display-6">unique sensations await you</h2>
+  </header>
+
+	<section class="description wz-90 mxW-1400 mx-auto my-5">
+			<h3 class="subtitle mb-4">Nature travel and engineerinG</h3>
+			
+			<div class="text-light tours-card row justify-content-between">
+				{{#each toursPageData}}
+					<div class="my-3 my-lg-4 d-flex align-items-center justify-content-center position-relative" style="background-image: url(assets/img/Tours/{{bgImg}});">
+						<div class="text position-relative">
+							<h3 class="title">{{title}}</h3>
+							<p class="subTitle">{{subTitle}}</p>
+
+							<a href="/tours/{{pageLink}}" class="pageLink text-dark light-limp-bg py-2 px-4 rounded-pill">Learn more</a>
+						</div>
+						<div class="overlay position-absolute"></div>
+					</div>
+				{{/each}}
+			</div>
+	</section>
+</main>

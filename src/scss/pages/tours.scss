@@ -1,0 +1,87 @@
+@mixin tourHeaderBg($id, $imgPath) {
+  main#{$id} {
+    header {
+      background: url("../img/Tours/individual-pages/#{$imgPath}") no-repeat
+        center;
+    }
+  }
+}
+
+@include tourHeaderBg("#tours", "tours-header-bg.jpg");
+
+@include tourHeaderBg("#silk-way", "silk-way-header-bg.jpg");
+
+@include tourHeaderBg("#naryn", "naryn-header-bg.jpg");
+
+@include tourHeaderBg("#pamir", "pamir-header-bg.jpg");
+
+@include tourHeaderBg("#tian-shan", "tian-shan-header-bg.jpg");
+
+@include tourHeaderBg("#mongolia", "mongolia-header-bg.jpg");
+
+@include tourHeaderBg("#tosor", "tosor-header-bg.jpg");
+
+@include tourHeaderBg("#bartang", "bartang-header-bg.jpg");
+
+main.tour {
+  header {
+    filter: none !important;
+
+    .headline {
+      @include font-size(5em, 25);
+    }
+
+    .subtitle {
+      @include font-size(1.1em, 20);
+      max-width: 750px;
+    }
+  }
+
+  color: #697078;
+}
+
+main#tours {
+  .tours-card {
+    & > *:not(:last-child) {
+      width: 48%;
+
+      @include screen("md") {
+				width: 100%;
+      }
+    }
+
+		& > * {
+			height: 250px;
+			border-radius: 30px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			overflow: hidden;
+
+			.text {
+				z-index: 2;
+
+				.title, .pageLink {
+					font-family: 'Montserrat_700', sans-serif;
+				}
+
+				.subTitle {
+					font-family: 'Montserrat_700', sans-serif;
+				}
+
+				.pageLink:hover {
+					background: rgba(114, 114, 114, 0.74);
+					color: white !important;
+				}
+			}
+
+			.overlay {
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0, 0, 0, 0.404);
+				z-index: 0;
+			}
+		}
+  }
+}

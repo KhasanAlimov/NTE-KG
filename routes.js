@@ -36,6 +36,65 @@ module.exports = (app) => {
     });
   });
 
+  app.get("/tours", (req, res) => {
+    const toursPageData = data.tours;
+
+    res.render("pages/tours/tours", {
+      title: "Tours",
+      isTours: true,
+      toursPageData
+    });
+  });
+
+  app.get("/tours/silk-way", (req, res) => {
+    res.render("pages/tours/silk-way", {
+      title: "Silk-way",
+      isSilkWay: true,
+    });
+  });
+
+  app.get("/tours/naryn", (req, res) => {
+    res.render("pages/tours/naryn", {
+      title: "Naryn",
+      isNaryn: true,
+    });
+  });
+
+  app.get("/tours/pamir", (req, res) => {
+    res.render("pages/tours/pamir", {
+      title: "Pamir",
+      isPamir: true,
+    });
+  });
+
+  app.get("/tours/tian-shan", (req, res) => {
+    res.render("pages/tours/tian-shan", {
+      title: "Tian-shan",
+      isTianShan: true,
+    });
+  });
+
+  app.get("/tours/mongolia", (req, res) => {
+    res.render("pages/tours/kyrgyz-mongol", {
+      title: "Kyrgyz-mongol",
+      isKyrgyzMongol: true,
+    });
+  });
+
+  app.get("/tours/tosor", (req, res) => {
+    res.render("pages/tours/tosor", {
+      title: "Tosor",
+      isTosor: true,
+    });
+  });
+
+  app.get("/tours/bartang", (req, res) => {
+    res.render("pages/tours/bartang", {
+      title: "Bartang",
+      isBartang: true,
+    });
+  });
+
   app.get("/housing", (req, res) => {
     res.render("pages/housing", {
       title: "Housing",

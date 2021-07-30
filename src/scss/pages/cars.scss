@@ -1,0 +1,10 @@
+main#cars {
+	header {
+		background: url("../img/Of-road/cars-header-bg.jpg") no-repeat center;
+        filter: none;
+
+		.headline {
+			@include font-size(5em, 25);
+		}
+	}
+}

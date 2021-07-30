@@ -46,5 +46,48 @@
 			}
 		]
 	},
-  "name": "Name"
+  "tours": [
+		{
+			"title": "SILK ROAD TOUR (MAY 2022)",
+			"subTitle": "02 MAY - 01 JUNE 2022",
+			"bgImg": "silk-way-min-img.jpg",
+			"pageLink": "silk-way"
+		},
+		{
+			"title": "PAMIR TOUR (MAY / JUNE 2022)",
+			"subTitle": "29 MAY - 11 JUNE 2022",
+			"bgImg": "pamir-min-img.jpg",
+			"pageLink": "pamir"
+		},
+		{
+			"title": "MONGOLIA TOUR 2022",
+			"subTitle": "JULY 10 - AUGUST 1, 2022",
+			"bgImg": "mongolia-min-img.jpg",
+			"pageLink": "mongolia"
+		},
+		{
+			"title": "NARYN TOUR (JULY 2022)",
+			"subTitle": "03 - 09 JULY 2022",
+			"bgImg": "naryn-min-img.jpg",
+			"pageLink": "naryn"
+		},
+		{
+			"title": "BARTANG TOUR 2022",
+			"subTitle": "04 - 17 SEPTEMBER 2022",
+			"bgImg": "bartang-min-img.jpg",
+			"pageLink": "bartang"
+		},
+		{
+			"title": "TOSOR TOUR (AUGUST 2022)",
+			"subTitle": "14 - 27 AUGUST 2022",
+			"bgImg": "tosor-min-img.jpg",
+			"pageLink": "tosor"
+		},
+		{
+			"title": "TYAN-SHAN TOUR (JUNE 2022)",
+			"subTitle": "05 - 18 JUNE 2022",
+			"bgImg": "tien-shan-min-img.jpg",
+			"pageLink": "tian-shan"
+		}
+	]
 }

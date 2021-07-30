@@ -21,6 +21,10 @@ header {
     height: 50vh !important;
   }
 
+  @media screen and (max-height: 450px) {
+    height: 100vh !important;
+  }
+
   .headline {
     @include font-size(6em, 25);
     font-family: 'Montserrat_700', sans-serif;

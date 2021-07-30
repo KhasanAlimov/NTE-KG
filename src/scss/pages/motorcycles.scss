@@ -3,7 +3,7 @@ main#motorcycles {
 		background: url("../img/Of-road/motorcycles-header-bg.jpg") no-repeat center;
 
 		.headline {
-			@include font-size(4em, 25);
+			@include font-size(5em, 25);
 		}
 	}
 }
