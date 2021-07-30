@@ -1,0 +1,10 @@
+main#save-budget {
+  header {
+    background: url("../img/SaveBudget/save-budget-header-bg.jpg") no-repeat center;
+  }
+  section {
+    @extend .subtitle;
+    padding-top: 5em;
+    background: linear-gradient(26.49deg, #D8D7D8 -3.78%, #F9F9F9 101.27%);
+  }
+}
