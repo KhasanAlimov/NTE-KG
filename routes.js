@@ -35,11 +35,35 @@ module.exports = (app) => {
       isCars: true,
     });
   });
-
   app.get("/housing", (req, res) => {
     res.render("pages/housing", {
       title: "Housing",
       isHousing: true,
     });
   });
+  app.get("/tires", (req, res) => {
+    res.render("pages/tires", {
+      title: "Tires",
+      isTires: true,
+    });
+  });
+  app.get("/oil", (req, res) => {
+    res.render("pages/oil", {
+      title: "Oil",
+      isOil: true,
+    });
+  });
+  app.get("/save-budget", (req, res) => {
+    res.render("pages/save-budget", {
+      title: "saveBudget",
+      isSaveBudget: true,
+    });
+  });
+  app.get("/repair-shop", (req, res) => {
+    res.render("pages/repair-shop", {
+      title: "repairShop",
+      isRepairShop: true,
+    });
+  });
 };
+
