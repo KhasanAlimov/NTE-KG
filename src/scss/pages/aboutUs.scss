@@ -12,6 +12,14 @@ main#about-us {
     @media screen and (min-width: 998px) {
       width: 900px;
     }
+  }
+  .targets {
+    list-style: none;
+      &  *::before {
+        content: "\25CF";
+        margin-right: 5px;
 
+
+      }
   }
 }
