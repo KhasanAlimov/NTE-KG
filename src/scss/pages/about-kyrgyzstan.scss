@@ -1,0 +1,51 @@
+main#about-kyrgyzstan {
+  header {
+    background: url("../img/About/About-Kg/about-kg-header-bg.jpg") no-repeat center;
+
+    .headline {
+      @include screen('sm') {
+        margin-top: 25%;
+      }
+    }
+  }
+  .sur-box {
+    background: linear-gradient(26.49deg, #D8D7D8 -3.78%, #F9F9F9 101.27%);
+  }
+  section {
+    @extend .subtitle;
+    padding-top: 5em;
+  }
+  section.description {
+    @media screen and (min-width: 998px) {
+      width: 900px;
+    }
+  }
+  .content-block {
+    color: black;
+  }
+  .h1Media {
+    @include font-size(5.5em, 34);
+    @include screen('lg') {
+      font-size: 4rem;
+    }
+  }
+  .h3Media {
+    @include font-size(1.57em, 15);
+    color: black;
+  }
+  .content {
+    @include font-size(1em, 10);
+  }
+  .image-block {
+    .images {
+      border-radius: 25px;
+      max-width: 93%;
+      margin-bottom: 1.8rem;
+    }
+    p {
+      bottom: 2rem;
+      left: 3rem;
+      color: white;
+    }
+  }
+}

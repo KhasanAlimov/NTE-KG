@@ -125,5 +125,11 @@ module.exports = (app) => {
       isRepairShop: true,
     });
   });
+  app.get("/about-kyrgyzstan", (req, res) => {
+    res.render("pages/about-kyrgyzstan", {
+      title: "aboutKyrgyzstan",
+      isAboutKyrgyzstan: true,
+    });
+  });
 };
 
