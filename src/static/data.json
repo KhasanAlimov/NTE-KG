@@ -89,5 +89,10 @@
 			"bgImg": "tien-shan-min-img.jpg",
 			"pageLink": "tian-shan"
 		}
-	]
+	],
+	"aboutCountries": {
+		"mongolia": ["child-in-mongolia.jpg", "eagle.jpg", "mongolian-peyzaj.jpg", "yurt.jpg", "beach.jpg", "mountines.jpg"],
+		"china": ["chinese-steppe.jpg", "mountine.jpg", "kayak.jpg", "lake.jpg", "hram.jpg", "panda.jpg"],
+		"tajikistan": ["lake.jpg", "sky-and-holms.jpg", "donkey.jpg", "desert.jpg", "kettle.jpg", "mountains.jpg"]
+	}
 }

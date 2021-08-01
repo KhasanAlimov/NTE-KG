@@ -1,27 +1,19 @@
-@mixin tourHeaderBg($id, $imgPath) {
-  main#{$id} {
-    header {
-      background: url("../img/Tours/individual-pages/#{$imgPath}") no-repeat
-        center;
-    }
-  }
-}
 
-@include tourHeaderBg("#tours", "tours-header-bg.jpg");
+@include pageHeaderBg("#tours", "Tours/individual-pages/tours-header-bg.jpg");
 
-@include tourHeaderBg("#silk-way", "silk-way-header-bg.jpg");
+@include pageHeaderBg("#silk-way", "Tours/individual-pages/silk-way-header-bg.jpg");
 
-@include tourHeaderBg("#naryn", "naryn-header-bg.jpg");
+@include pageHeaderBg("#naryn", "Tours/individual-pages/naryn-header-bg.jpg");
 
-@include tourHeaderBg("#pamir", "pamir-header-bg.jpg");
+@include pageHeaderBg("#pamir", "Tours/individual-pages/pamir-header-bg.jpg");
 
-@include tourHeaderBg("#tian-shan", "tian-shan-header-bg.jpg");
+@include pageHeaderBg("#tian-shan", "Tours/individual-pages/tian-shan-header-bg.jpg");
 
-@include tourHeaderBg("#mongolia", "mongolia-header-bg.jpg");
+@include pageHeaderBg("#mongolia", "Tours/individual-pages/mongolia-header-bg.jpg");
 
-@include tourHeaderBg("#tosor", "tosor-header-bg.jpg");
+@include pageHeaderBg("#tosor", "Tours/individual-pages/tosor-header-bg.jpg");
 
-@include tourHeaderBg("#bartang", "bartang-header-bg.jpg");
+@include pageHeaderBg("#bartang", "Tours/individual-pages/bartang-header-bg.jpg");
 
 main.tour {
   header {

@@ -36,3 +36,13 @@
     }
   }
 }
+
+
+@mixin pageHeaderBg($id, $imgPath) {
+  main#{$id} {
+    header {
+      background: url("../img/#{$imgPath}") no-repeat
+        center;
+    }
+  }
+}

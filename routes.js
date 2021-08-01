@@ -125,5 +125,30 @@ module.exports = (app) => {
       isRepairShop: true,
     });
   });
+  app.get("/about-mongolia", (req, res) => {
+    const aboutMongoliaData = data.aboutCountries.mongolia;
+    res.render("pages/about-countries/about-mongolia", {
+      title: "About-mongolia",
+      isAboutMongolia: true,
+      aboutMongoliaData
+    });
+  });
+  app.get("/about-china", (req, res) => {
+    const aboutChinaData = data.aboutCountries.china;
+    res.render("pages/about-countries/about-china", {
+      title: "About-china",
+      isAboutChina: true,
+      aboutChinaData
+    });
+  });
+
+  app.get("/about-tajikistan", (req, res) => {
+    const aboutTajikistanData = data.aboutCountries.tajikistan;
+    res.render("pages/about-countries/about-tajikistan", {
+      title: "About-tajikistan",
+      isAboutTajikistan: true,
+      aboutTajikistanData
+    });
+  });
 };
 

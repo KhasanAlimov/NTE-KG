@@ -1,0 +1,41 @@
+main#about-countries {
+	background: linear-gradient(26.49deg, #D8D7D8, #F9F9F9);
+
+  header {
+		.subtitle {
+			@include font-size(1em, 10);
+			max-width: 900px;
+		}
+	}
+
+	section#description {
+		font-family: 'Montserrat_500', sans-serif;
+
+		.characteristics {
+			width: 48%;
+
+			@include screen('lg') {
+				width: 100%;
+			}
+		}
+	}
+
+	section#gallery {
+		.img-block {
+			height: max-content;
+			width: 49%;
+
+			@include screen('sm') {
+				width: 100%;
+			}
+
+			img {
+				border-radius: 30px;
+			}
+		}
+	}
+}
+
+@include pageHeaderBg(".about-mongolia", "about-countries/mongolia/about-mongolia-header-bg.jpg");
+@include pageHeaderBg(".about-china", "about-countries/china/about-china-header-bg.jpg");
+@include pageHeaderBg(".about-tajikistan", "about-countries/tajikistan/about-tajikistan-header-bg.jpg");
