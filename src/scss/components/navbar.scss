@@ -1,7 +1,7 @@
 
 .nav-drop-container {
   .nav-drop-item {
-    @extend .light-limp-bg;
+    @extend .dark-limp-bg;
 
     top: 3em;
     visibility: hidden;
@@ -16,7 +16,7 @@
 }
 
 .active {
-  color: #000000 !important;
+  color: #bbbbbb !important;
 }
 
 nav {
@@ -29,7 +29,7 @@ nav {
   .right-nav {
     *,
     .nav-link {
-      color: #697078;
+      color: #ffffff;
       padding: 0;
     }
     .language-switch > span,
@@ -39,10 +39,10 @@ nav {
       transition: all 0.3s ease;
 
       &:hover {
-        color: #000000;
+        color: #bbbbbb;
 
         & > * {
-          color: #000000;
+          color: #bbbbbb;
         }
       }
     }
@@ -80,6 +80,7 @@ nav {
 
       &:hover {
         background: #ffffff;
+        color: #bbbbbb;
       }
     }
   }

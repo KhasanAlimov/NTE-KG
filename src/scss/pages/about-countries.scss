@@ -39,3 +39,19 @@ main#about-countries {
 @include pageHeaderBg(".about-mongolia", "about-countries/mongolia/about-mongolia-header-bg.jpg");
 @include pageHeaderBg(".about-china", "about-countries/china/about-china-header-bg.jpg");
 @include pageHeaderBg(".about-tajikistan", "about-countries/tajikistan/about-tajikistan-header-bg.jpg");
+@include pageHeaderBg(".about-kyrgyzstan", "about-countries/kyrgyzstan/about-kg-header-bg.jpg");
+
+main.about-kyrgyzstan {
+	section#gallery {
+		.location-name {
+			bottom: 7%;
+			left: 9%;
+			font-family: 'Montserrat_600', sans-serif;
+			@include font-size(1em, 10);
+
+			img {
+				margin: -10px 0 0 0;
+			}
+		}
+	}
+}

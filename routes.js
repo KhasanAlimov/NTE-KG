@@ -22,6 +22,13 @@ module.exports = (app) => {
     });
   });
 
+  app.get("/contacts", (req, res) => {
+    res.render("pages/contacts", {
+      title: "Contacts",
+      isContacts: true,
+    });
+  });
+
   app.get("/Off-road-motorcycles", (req, res) => {
     res.render("pages/motorcycles", {
       title: "Off-road motorcycles",
@@ -42,7 +49,7 @@ module.exports = (app) => {
     res.render("pages/tours/tours", {
       title: "Tours",
       isTours: true,
-      toursPageData
+      toursPageData,
     });
   });
 
@@ -130,7 +137,7 @@ module.exports = (app) => {
     res.render("pages/about-countries/about-mongolia", {
       title: "About-mongolia",
       isAboutMongolia: true,
-      aboutMongoliaData
+      aboutMongoliaData,
     });
   });
   app.get("/about-china", (req, res) => {
@@ -138,7 +145,7 @@ module.exports = (app) => {
     res.render("pages/about-countries/about-china", {
       title: "About-china",
       isAboutChina: true,
-      aboutChinaData
+      aboutChinaData,
     });
   });
 
@@ -147,8 +154,21 @@ module.exports = (app) => {
     res.render("pages/about-countries/about-tajikistan", {
       title: "About-tajikistan",
       isAboutTajikistan: true,
-      aboutTajikistanData
+      aboutTajikistanData,
     });
   });
-};
 
+  app.get("/about-kyrgyzstan", (req, res) => {
+    const aboutKyrgyzstanData = data.aboutCountries.kyrgyzstan;
+    res.render("pages/about-countries/about-kyrgyzstan", {
+      title: "About-kyrgyzstan",
+      isAboutKyrgyzstan: true,
+      aboutKyrgyzstanData
+    });
+  });
+
+
+  app.use((req, res, next) => {
+    res.status(404).render("pages/error404")
+  });
+};

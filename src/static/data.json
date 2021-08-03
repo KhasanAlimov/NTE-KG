@@ -91,6 +91,7 @@
 		}
 	],
 	"aboutCountries": {
+		"kyrgyzstan": [["about-kg-kochkor.jpg", "Kochkor"], ["about-kg-kol-tor-lake.jpg", "Kol-Tor lake"], ["about-kg-waterfall.jpg", "barskoon waterfall"], ["about-kg-konorchek.jpg", "Konorchek conyons"], ["about-kg-kegeti.jpg", "Kegeti"], ["about-kg-winter.jpg", "son-kol lake winter "]],
 		"mongolia": ["child-in-mongolia.jpg", "eagle.jpg", "mongolian-peyzaj.jpg", "yurt.jpg", "beach.jpg", "mountines.jpg"],
 		"china": ["chinese-steppe.jpg", "mountine.jpg", "kayak.jpg", "lake.jpg", "hram.jpg", "panda.jpg"],
 		"tajikistan": ["lake.jpg", "sky-and-holms.jpg", "donkey.jpg", "desert.jpg", "kettle.jpg", "mountains.jpg"]
