@@ -1,7 +1,7 @@
 const fs = require("fs"),
   path = require("path");
 
-const localJson = fs.readFileSync(path.resolve(__dirname, "dist/data.json")),
+const localJson = fs.readFileSync(path.resolve(__dirname, "../dist/data.json")),
   data = JSON.parse(localJson);
 
 module.exports = (app) => {

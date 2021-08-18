@@ -1,34 +1,47 @@
-require('dotenv').config();
-const express = require('express');
+require("dotenv").config();
+const express = require("express");
 const app = express();
+const mongoose = require('mongoose');
 const expressHbs = require("express-handlebars");
 const hbs = require("hbs");
-const routes = require('./routes.js');
+const pageRoutes = require("./routes/pages.js");
+const authRoutes = require("./routes/auth.js");
 
 // Настройки HandleBars
-app.engine("hbs", expressHbs(
-    {
-        layoutsDir: "views/layouts", 
-        defaultLayout: "layout",
-        extname: "hbs"
-    }
-));
+app.engine(
+  "hbs",
+  expressHbs({
+    layoutsDir: "views/layouts",
+    defaultLayout: "layout",
+    extname: "hbs",
+  })
+);
 
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");
 
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + "/dist"));
 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
-routes(app);
+authRoutes(app);
+pageRoutes(app);
 
 
-try {
-  app.listen(process.env.PORT, () => {
-    console.log(`Сервер запущен в порту ${process.env.PORT}!`);
-  });
-}catch (e) {
-  console.log(e);
-}
+const start = async () => {
+  try {
+    await mongoose.connect(process.env.AUTH_URI, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useFindAndModify: false
+    });
 
+    app.listen(process.env.PORT, () => {
+      console.log(`Сервер запущен в порту ${process.env.PORT}!`);
+    });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+start()
