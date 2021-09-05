@@ -1,10 +1,21 @@
 main#save-budget {
   header {
     background: url("../img/SaveBudget/save-budget-header-bg.jpg") no-repeat center;
+
+    .h1Media {
+      @include font-size(6em, 28)
+    }
+    .h2Media {
+      @include font-size(2.25em, 20)
+    }
   }
   section {
     @extend .subtitle;
-    padding-top: 5em;
+    padding-top: 3.6em;
     background: linear-gradient(26.49deg, #D8D7D8 -3.78%, #F9F9F9 101.27%);
+
+  }
+  .rectangle {
+    border-radius: 30px;
   }
 }

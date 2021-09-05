@@ -1,28 +1,28 @@
 <main id="home">
   <header  class="text-light text-center d-flex flex-column justify-content-center">
-    <h1 class="headline">Kyrgyzstan</h1>
-    <h2 class="subtitle display-6">Discover with us</h2>
+    <h1 class="headline" lang-key="kyrgyzstan">Kyrgyzstan</h1>
+    <h2 class="subtitle display-6" lang-key="discoverWithUs">Discover with us</h2>
     <div class="social-networks">
-      <a href="#" class="text-light">
+      <a href="https://wa.me/996556356666" class="text-light">
         <i class="fab fa-whatsapp-square"></i>
       </a>
-      <a href="#" class="text-light">
+      <a href="https://www.instagram.com/nte.kg/" class="text-light">
         <i class="fab fa-instagram-square"></i>
       </a>
-      <a href="#" class="text-light telegram">
+      <a href="https://t.me/996556356666" class="text-light telegram">
         <img src="assets/icons/home/telegram-svgrepo-com.svg" alt="telegram">
       </a>
-      <a href="#" class="text-light">
+      <a href="https://www.facebook.com/withnte/" class="text-light">
         <i class="fab fa-facebook-square"></i>
       </a>
-      <a href="#" class="text-light">
+      <a href="mailto:naturetravel.osh@gmail.com" class="text-light">
         <i class="fas fa-envelope-square"></i>
       </a>
     </div>
   </header>
 
   <section class="services-section mt-5 mxW-1400 mx-auto">
-    <h4 class="subtitle text-center">Nature travel and engineering</h4>
+    <h4 class="subtitle text-center" lang-key="natureTravelAndEngineering">Nature travel and engineering</h4>
     <div class="services row justify-content-lg-between justify-content-around my-5 mx-auto wz-90">
       {{#each homePageData.services}}
         <a href="/{{pageLink}}" class="service py-3 justify-content-center my-4 col-lg-2 col-md-4 col-5 d-grid gap-4">
@@ -34,7 +34,7 @@
   </section>
 
   <section class="countries mxW-1400 mx-auto">
-    <h4 class="subtitle text-center mb-5">Countries we visit</h4>
+    <h4 class="subtitle text-center mb-5" lang-key="countiesWeVisit">Countries we visit</h4>
 
     <div class="countries-container wz-90 mx-auto d-grid gap-5 px-md-5">
       {{#each homePageData.countries}}

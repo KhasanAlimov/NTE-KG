@@ -20,6 +20,9 @@
   <title>{{title}}</title>
 </head>
 <body class="text-uppercase">
+<div class="preloader">
+    <img class="preloader__image" role="img" src="assets/icons/Logo-NTE.svg" alt="">
+</div>
   {{> navbar}}
 
   {{{body}}}
@@ -28,4 +31,13 @@
 
   <script src="assets/js/home.js"></script>
 </body>
+<script>
+    window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+        }, 500);
+    }
+</script>
 </html>

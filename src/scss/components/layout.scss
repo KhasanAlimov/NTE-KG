@@ -1,0 +1,32 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  /* фоновый цвет */
+  background: linear-gradient(26.49deg, #D8D7D8 -3.78%, #F9F9F9 101.27%);
+  z-index: 10000;
+}
+
+.preloader__image {
+  display: flex;
+  position: relative;
+  top: 25%;
+  width: 30%;
+  margin: 0 auto;
+  animation: preloader-rotate 3s infinite linear;
+}
+@keyframes preloader-rotate {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+.loaded .preloader {
+  display: none;
+}
