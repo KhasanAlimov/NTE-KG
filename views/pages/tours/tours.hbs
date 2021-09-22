@@ -11,10 +11,10 @@
 				{{#each toursPageData}}
 					<div class="my-3 my-lg-4 d-flex align-items-center justify-content-center position-relative" style="background-image: url(assets/img/Tours/{{bgImg}});">
 						<div class="text position-relative">
-							<h3 class="title">{{title}}</h3>
-							<p class="subTitle">{{subTitle}}</p>
+							<h3 class="title" lang-key="{{langKey}}">{{title}}</h3>
+							<p class="subTitle" lang-key="{{langKey2}}">{{subTitle}}</p>
 
-							<a href="/tours/{{pageLink}}" class="pageLink text-dark light-limp-bg py-2 px-4 rounded-pill">Learn more</a>
+							<a href="/tours/{{pageLink}}" class="pageLink text-dark light-limp-bg py-2 px-4 rounded-pill" lang-key="learnMore">Learn more</a>
 						</div>
 						<div class="overlay position-absolute"></div>
 					</div>

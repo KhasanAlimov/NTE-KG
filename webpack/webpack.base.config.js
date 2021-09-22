@@ -13,7 +13,7 @@ module.exports = {
     paths: Paths,
   },
   entry: {
-    home: `${Paths.src}/js/home.js`,
+    lang: `${Paths.src}/js/lang.js`,
     app: `${Paths.src}/js/main.js`
   },
   output: {

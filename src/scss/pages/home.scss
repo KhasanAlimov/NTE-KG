@@ -40,7 +40,6 @@ main#home {
         }
         p {
           font-family: "Montserrat_400", sans-serif;
-          white-space: nowrap;
 
           @include font-size(1em, 12);
         }

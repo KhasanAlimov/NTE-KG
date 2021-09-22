@@ -1,115 +1,112 @@
 <div class="dark-limp-bg fixed-top">
-<nav class="navbar row m-auto px-3 mxW-1400">
+    <nav class="navbar row m-auto px-3 mxW-1400">
 
-  <div class="left-nav col-md-5 col-4 d-flex justify-content-between">
-    <div class="language-switch position-relative nav-drop-container">
-      <span>Eng</span>
-      <div class="available-langs position-absolute nav-drop-item">
-        <p class="py-1 px-2 m-0">deu</p>
-        <p class="py-1 px-2 m-0">rus</p>
-        <p class="py-1 px-2 m-0 selected">eng</p>
-      </div>
-    </div>
+        <div class="left-nav col-md-5 col-4 d-flex justify-content-between">
+            <div class="language-changer language-switch position-relative nav-drop-container">
+                <span id="activeLanguage">Eng</span>
+                <div class="available-langs position-absolute nav-drop-item" id="lang">
+                    <p class="py-1 px-2 m-0 selected" lang-value="en">eng</p>
+                    <p class="py-1 px-2 m-0" lang-value="ru">рус</p>
+                </div>
+            </div>
 
-    <ul class="navbar-nav col-md-9 justify-content-around flex-row d-none d-md-flex">
-      <li class="nav-item">
-        <a class="nav-link" href="/about-us">About us</a>
-      </li>
-      <li class="nav-item dropdown-link position-relative nav-drop-container">rents-SALES
+            <ul class="navbar-nav col-md-9 justify-content-around flex-row d-none d-md-flex">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us" lang-key="aboutUs">About us</a>
+                </li>
+                <li class="nav-item dropdown-link position-relative nav-drop-container"><span lang-key="rentsSales">rents-SALES</span>
+                    <ul class="dropdown position-absolute py-2 ps-3 nav-drop-item">
+                        <li class="nav-item py-1 px-2">
+                            <a href="/off-road-cars" class="nav-link" lang-key="offRoadCars">OFF-Road cars</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/Off-road-motorcycles" class="nav-link" lang-key="offRoadMotorcycles">Off-road motorcycles</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/tires" class="nav-link" lang-key="tires">tires</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/oil" class="nav-link" lang-key="oil">oil</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-        <ul class="dropdown position-absolute py-2 ps-3 nav-drop-item">
-          <li class="nav-item py-1 px-2">
-            <a href="/off-road-cars" class="nav-link">OFF-Road cars</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/Off-road-motorcycles" class="nav-link">Off-road motorcycles</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/tires" class="nav-link">tires</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/oil" class="nav-link">oil</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+        <div class="logo-block col-md-2 col-4 p-0 text-center">
+            <a class="navbar-brand m-0" href="/">
+                <img src="assets/icons/NTE-header-logo.svg" alt="NTE kg logo" class="logo mw-100">
+            </a>
+        </div>
 
-  <div class="logo-block col-md-2 col-4 p-0 text-center">
-    <a class="navbar-brand m-0" href="/">
-      <img src="assets/icons/NTE-header-logo.svg" alt="NTE kg logo" class="logo mw-100">
-    </a>
-  </div>
+        <div class="right-nav col-md-5 col-4 d-flex justify-content-md-between justify-content-end">
+            <ul class="navbar-nav col-md-9 flex-row justify-content-around d-none d-md-flex">
+                <li class="nav-item dropdown-link position-relative nav-drop-container"><span lang-key="tours">Tours</span> 
+                    <ul class="dropdown position-absolute py-2 ps-3 nav-drop-item">
+                        <li class="nav-item py-1 px-2">
+                            <a href="/tours/silk-way" class="nav-link" lang-key="silkWayRoadTour">Silk-way road tour</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/tours/naryn" class="nav-link" lang-key="narynTour">Naryn tour</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/tours/pamir" class="nav-link" lang-key="pamirTour">pamir tour</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/tours/tian-shan" class="nav-link" lang-key="tienShanTour">Tian-shan tour</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/tours/mongolia" class="nav-link" lang-key="kyrgyzstanMongoliaTour">Kyrgyzstan-mongolia tour</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/tours/tosor" class="nav-link" lang-key="tosorTour">tosor tour</a>
+                        </li>
+                        <li class="nav-item py-1 px-2">
+                            <a href="/tours/bartang" class="nav-link" lang-key="bartangTour">bartang tour</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacts" lang-key="contacts">Contacts</a>
+                </li>
+            </ul>
 
-  <div class="right-nav col-md-5 col-4 d-flex justify-content-md-between justify-content-end">
-    <ul class="navbar-nav col-md-9 flex-row justify-content-around d-none d-md-flex">
-      <li class="nav-item dropdown-link position-relative nav-drop-container">Tours
+            <div class="burger-menu dropdown-link position-relative nav-drop-container">
+                <img src="assets/icons/Menu.svg" alt="Burger svg icon">
 
-        <ul class="dropdown position-absolute py-2 ps-3 nav-drop-item">
-          <li class="nav-item py-1 px-2">
-            <a href="/tours/silk-way" class="nav-link">Silk-way road tour</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/tours/naryn" class="nav-link">Naryn tour</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/tours/pamir" class="nav-link">pamir tour</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/tours/tian-shan" class="nav-link">Tian-shan tour</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/tours/mongolia" class="nav-link">Kyrgyzstan-mongolia tour</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/tours/tosor" class="nav-link">tosor tour</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/tours/bartang" class="nav-link">bartang tour</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contacts">Contacts</a>
-      </li>
-    </ul>
-
-    <div class="burger-menu dropdown-link position-relative nav-drop-container">
-      <img src="assets/icons/Menu.svg" alt="Burger svg icon">
-
-      <ul class="dropdown position-absolute py-2 ps-3 nav-drop-item">
-          <li class="nav-item py-1 px-2">
-            <a href="/tours" class="nav-link">Tours</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/off-road-cars" class="nav-link">Off-road cars</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/Off-road-motorcycles" class="nav-link">Motorcycles</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/repair-shop" class="nav-link">Repair Shop</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/housing" class="nav-link">Housing</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/save-budget" class="nav-link">Save budget</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/tires" class="nav-link">tires</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/oil" class="nav-link">oil</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/about-us" class="nav-link">About us</a>
-          </li>
-          <li class="nav-item py-1 px-2">
-            <a href="/contacts" class="nav-link">Contacts</a>
-          </li>
-        </ul>
-    </div>
-  </div>
-</nav>
+                <ul class="dropdown position-absolute py-2 ps-3 nav-drop-item">
+                    <li class="nav-item py-1 px-2">
+                        <a href="/tours" class="nav-link" lang-key="tours">Tours</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/off-road-cars" class="nav-link" lang-key="offRoadCars">Off-road cars</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/Off-road-motorcycles" class="nav-link" lang-key="offRoadMotorcycles">Motorcycles</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/repair-shop" class="nav-link" lang-key="repairShop">Repair Shop</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/housing" class="nav-link" lang-key="housing">Housing</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/save-budget" class="nav-link" lang-key="saveBudget">Save budget</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/tires" class="nav-link" lang-key="tires">tires</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/oil" class="nav-link" lang-key="oil">oil</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/about-us" class="nav-link" lang-key="aboutUs">About us</a>
+                    </li>
+                    <li class="nav-item py-1 px-2">
+                        <a href="/contacts" class="nav-link" lang-key="contacts">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>

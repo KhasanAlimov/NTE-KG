@@ -4,45 +4,54 @@
 			{
 				"icon": "truck-icon.svg",
 				"title": "car rent",
-				"pageLink": "off-road-cars"
+				"pageLink": "off-road-cars",
+				"langKey": "carRent"
 			},
 			{
 				"icon": "mountain-icon.svg",
 				"title": "tours",
-				"pageLink": "tours"
+				"pageLink": "tours",
+				"langKey": "tours"
 			},
 			{
 				"icon": "morcycle-helmet-icon.svg",
 				"title": "motorcycle rent",
-				"pageLink": "Off-road-motorcycles"
+				"pageLink": "Off-road-motorcycles",
+				"langKey": "motorcycleRent"
 			},
 			{
 				"icon": "engineering-icon.svg",
 				"title": "repair shop",
-				"pageLink": "repair-shop"
+				"pageLink": "repair-shop",
+				"langKey": "repairShop"
 			},
 			{
 				"icon": "avatar-icon.svg",
 				"title": "about us",
-				"pageLink": "about-us"
+				"pageLink": "about-us",
+				"langKey": "aboutUs"
 			}
 		],
 		"countries": [
 			{
 				"bgImage": "about-kyrgyzstan.jpg",
-				"name": "kyrgyzstan"
+				"name": "kyrgyzstan",
+				"langKey": "aboutKyrgyzstan"
 			},
 			{
 				"bgImage": "about-tajikistan.jpg",
-				"name": "tajikistan"
+				"name": "tajikistan",
+				"langKey": "aboutTajikistan"
 			},
 			{
 				"bgImage": "about-mongolia.jpg",
-				"name": "mongolia"
+				"name": "mongolia",
+				"langKey": "aboutMongolia"
 			},
 			{
 				"bgImage": "about-china.jpg",
-				"name": "china"
+				"name": "china",
+				"langKey": "aboutChina"
 			}
 		]
 	},
@@ -51,43 +60,57 @@
 			"title": "SILK ROAD TOUR (MAY 2022)",
 			"subTitle": "02 MAY - 01 JUNE 2022",
 			"bgImg": "silk-way-min-img.jpg",
-			"pageLink": "silk-way"
+			"pageLink": "silk-way",
+			"langKey": "silkRoadTour",
+			"langKey2": "silkRoadTour2"
 		},
 		{
 			"title": "PAMIR TOUR (MAY / JUNE 2022)",
 			"subTitle": "29 MAY - 11 JUNE 2022",
 			"bgImg": "pamir-min-img.jpg",
-			"pageLink": "pamir"
+			"pageLink": "pamir",
+			"langKey": "pamirTour",
+			"langKey2": "pamirTour2"
 		},
 		{
 			"title": "MONGOLIA TOUR 2022",
 			"subTitle": "JULY 10 - AUGUST 1, 2022",
 			"bgImg": "mongolia-min-img.jpg",
-			"pageLink": "mongolia"
+			"pageLink": "mongolia",
+			"langKey": "mongoliaTour",
+			"langKey2": "mongoliaTour2"
 		},
 		{
 			"title": "NARYN TOUR (JULY 2022)",
 			"subTitle": "03 - 09 JULY 2022",
 			"bgImg": "naryn-min-img.jpg",
-			"pageLink": "naryn"
+			"pageLink": "naryn",
+			"langKey": "narynTour",
+			"langKey2": "narynTour2"
 		},
 		{
 			"title": "BARTANG TOUR 2022",
 			"subTitle": "04 - 17 SEPTEMBER 2022",
 			"bgImg": "bartang-min-img.jpg",
-			"pageLink": "bartang"
+			"pageLink": "bartang",
+			"langKey": "bartangTour",
+			"langKey2": "bartangTour2"
 		},
 		{
 			"title": "TOSOR TOUR (AUGUST 2022)",
 			"subTitle": "14 - 27 AUGUST 2022",
 			"bgImg": "tosor-min-img.jpg",
-			"pageLink": "tosor"
+			"pageLink": "tosor",
+			"langKey": "tosorTour",
+			"langKey2": "tosorTour2"
 		},
 		{
 			"title": "TYAN-SHAN TOUR (JUNE 2022)",
 			"subTitle": "05 - 18 JUNE 2022",
 			"bgImg": "tien-shan-min-img.jpg",
-			"pageLink": "tian-shan"
+			"pageLink": "tian-shan",
+			"langKey": "tyanShanTour",
+			"langKey2": "tyanShanTour2"
 		}
 	],
 	"aboutCountries": {
