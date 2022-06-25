@@ -1,0 +1,29 @@
+<div class="container position-relative vh-100 d-flex align-items-center">
+  <div class="mx-auto w-100" style="max-width: 350px;">
+
+    <form action="/login" method='post'>
+      <h2 class="text-center">Admin panel</h2>
+
+      {{! Login field }}
+      <div class="my-3">
+        <label for="login" class="form-label">Login</label>
+        <input type="text" name="username" class="form-control" id="login" required/>
+      </div>
+
+      {{! Password field }}
+      <div class="my-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="password" required/>
+      </div>
+
+      {{!-- Error message --}}
+      {{#if error}}
+        <p class="pb-2 text-danger border-bottom border-danger" style="font-size: 12px;">Login or password is incorrect</p>
+      {{/if}}
+
+      {{! Submit button }}
+      <button type="submit" class="btn btn-primary px-5">Submit</button>
+    </form>
+
+  </div>
+</div>

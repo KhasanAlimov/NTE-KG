@@ -1,0 +1,36 @@
+<h1 class="mt-4">Контакты</h1>
+
+<section>
+  <form action="/contacts_update" method="POST" class="row g-3">
+    <div class="col-sm-6">
+      <div>Указанные контакты</div>
+      <div class="">
+        <textarea
+          name="contacts_ru"
+          class="text-area form-control"
+          placeholder="Текст"
+          id="floatingTextarea1"
+					rows="7"
+        >{{contacts.contacts.ru}}</textarea>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="col-12">
+        Перевод на английский
+      </div>
+      <div class="">
+        <textarea
+          name="contacts_en"
+          class="text-area form-control"
+          placeholder="Text"
+          id="floatingTextarea2"
+					rows="7">{{contacts.contacts.en}}</textarea>
+      </div>
+    </div>
+    {{! Save button }}
+    <div class="col-12 mt-4 text-end">
+      <button type="submit" class="btn btn-primary">Сохранить</button>
+    </div>
+  </form>
+</section>

@@ -10,26 +10,38 @@
   <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
 
   {{!-- css styles --}}
-  <link rel="stylesheet" href="assets/css/app.css">
+  {{#unless isAdminPanel}}
+    <link rel="stylesheet" href="assets/css/app.css">
+  
 
   {{!-- bootstrap --}}
   <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
-
+{{/unless}}
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   
   <title>{{title}}</title>
 </head>
-<body class="text-uppercase">
-<div class="preloader">
-    <img class="preloader__image" role="img" src="assets/icons/Logo-NTE.svg" alt="">
+
+  {{#if isAdminPanel}}
+
+    {{{body}}}
+
+  {{else}}
+
+  <body class="text-uppercase">
+
+  <div class="preloader">
+    <img class="preloader__image" role="img" src="assets/icons/Logo-NTE.svg" alt="NTE">
 </div>
-  {{> navbar}}
 
-  {{{body}}}
+    {{> navbar}}
 
-  {{> footer}}
+    {{{body}}}
 
-<script src="assets/js/lang.js"></script>
+    {{> footer}}
+
+    <script src="assets/js/lang.js"></script>
+
 </body>
 <script>
     window.onload = function () {
@@ -40,5 +52,7 @@
         }, 500);
     }
 </script>
+
+{{/if}}
 
 </html>

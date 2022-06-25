@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
-const Admin = new Schema({
-  login: {
+const AuthAdmin = new Schema({
+  username: {
     type: String,
     unique: true,
     required: true,
@@ -10,6 +10,9 @@ const Admin = new Schema({
       type: String,
       required: true
   }
+},{
+  versionKey: false,
+  collation: "User"
 });
 
-module.exports = model('Auth', Admin);
+module.exports = model('AuthModel', AuthAdmin);

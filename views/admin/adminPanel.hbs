@@ -1,0 +1,314 @@
+<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="libs/bootstrap/styles.css">
+
+<style>
+  .emloyee-card {
+    border-radius: 10px;
+    max-width: 1000px;
+  }
+  .emloyee-card .emloyee-img {
+    height: 130px;
+    max-width: 100%;
+  } 
+  .emloyee-card .cursor-pointer{
+    cursor: pointer;
+  }
+</style>
+
+<body class="sb-nav-fixed">
+
+  {{!-- Top navigation --}}
+  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <!-- Navbar Brand-->
+    <a class="navbar-brand ps-3">Панель управления</a>
+    <!-- Sidebar Toggle-->
+    <button
+      class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+      id="sidebarToggle"
+      href="#!"
+    ><i class="fas fa-bars"></i></button>
+
+    <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"></div>
+
+    <!-- Navbar-->
+    <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        ><i class="fas fa-user fa-fw"></i></a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdown"
+        >
+          <li><a class="dropdown-item" href="#">Настройки</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Выйти</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  {{! Sidebar }}
+  <div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+      <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+          <div class="nav">
+            <div class="sb-sidenav-menu-heading">Основной</div>
+            <a class="nav-link" href="admin-panel">
+              <div class="sb-nav-link-icon"><i
+                  class="fas fa-tachometer-alt"
+                ></i></div>
+              Статистика
+            </a>
+            <div class="sb-sidenav-menu-heading">Интерфейс</div>
+
+            {{!-- Mutable pages --}}
+            <a
+              class="nav-link collapsed"
+              href="#"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseLayouts"
+              aria-expanded="false"
+              aria-controls="collapseLayouts"
+            >
+              <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+              Страницы
+              <div class="sb-sidenav-collapse-arrow"><i
+                  class="fas fa-angle-down"
+                ></i></div>
+            </a>
+
+            {{!-- Pages --}}
+            <div
+              class="collapse"
+              id="collapseLayouts"
+              aria-labelledby="headingOne"
+              data-bs-parent="#sidenavAccordion"
+            >
+              <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="admin-panel?pageName=aboutUs">О нас</a>
+                <a class="nav-link" href="admin-panel?pageName=contacts">Контакты</a>
+                <a
+                  class="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#pagesCollapseAuth"
+                  aria-expanded="false"
+                  aria-controls="pagesCollapseAuth"
+                >
+                  Транспорт
+                  <div class="sb-sidenav-collapse-arrow"><i
+                      class="fas fa-angle-down"
+                    ></i></div>
+                </a>
+                <div
+                  class="collapse"
+                  id="pagesCollapseAuth"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#sidenavAccordionPages"
+                >
+                  <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="admin-panel?pageName=cars">Внедорожники</a>
+                    <a class="nav-link" href="admin-panel?pageName=motorcycles">Внедорожные мотоциклы</a>
+                    <a class="nav-link" href="admin-panel?pageName=tires">Шины</a>
+                    <a class="nav-link" href="admin-panel?pageName=oil">Масло</a>
+                  </nav>
+                </div>
+                <a class="nav-link" href="admin-panel?pageName=housing">Жилье</a>
+                <a class="nav-link" href="admin-panel?pageName=budget">Эконом бюджета</a>
+              </nav>
+            </div>
+
+            {{!-- Other --}}
+            <a
+              class="nav-link collapsed"
+              href="#"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsePages"
+              aria-expanded="false"
+              aria-controls="collapsePages"
+            >
+              <div class="sb-nav-link-icon"><i
+                  class="fas fa-columns"
+                ></i></div>
+              Прочее
+              <div class="sb-sidenav-collapse-arrow"><i
+                  class="fas fa-angle-down"
+                ></i></div>
+            </a>
+
+            {{!-- Other links --}}
+            <div
+              class="collapse"
+              id="collapsePages"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#sidenavAccordion"
+            >
+              <nav
+                class="sb-sidenav-menu-nested nav accordion"
+                id="sidenavAccordionPages"
+              >
+                <a
+                  class="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#pagesCollapseAuth"
+                  aria-expanded="false"
+                  aria-controls="pagesCollapseAuth"
+                >
+                  Authentication
+                  <div class="sb-sidenav-collapse-arrow"><i
+                      class="fas fa-angle-down"
+                    ></i></div>
+                </a>
+                <div
+                  class="collapse"
+                  id="pagesCollapseAuth"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#sidenavAccordionPages"
+                >
+                  <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="register.html">Register</a>
+                    <a class="nav-link" href="password.html">Forgot Password</a>
+                  </nav>
+                </div>
+                <a
+                  class="nav-link collapsed"
+                  href="#"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#pagesCollapseError"
+                  aria-expanded="false"
+                  aria-controls="pagesCollapseError"
+                >
+                  Error
+                  <div class="sb-sidenav-collapse-arrow"><i
+                      class="fas fa-angle-down"
+                    ></i></div>
+                </a>
+                <div
+                  class="collapse"
+                  id="pagesCollapseError"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#sidenavAccordionPages"
+                >
+                  <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="401.html">401 Page</a>
+                    <a class="nav-link" href="404.html">404 Page</a>
+                    <a class="nav-link" href="500.html">500 Page</a>
+                  </nav>
+                </div>
+              </nav>
+            </div>
+
+
+            <div class="sb-sidenav-menu-heading">Addons</div>
+            <a class="nav-link" href="charts.html">
+              <div class="sb-nav-link-icon"><i
+                  class="fas fa-chart-area"
+                ></i></div>
+              Charts
+            </a>
+            <a class="nav-link" href="tables.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+              Tables
+            </a>
+          </div>
+        </div>
+        <div class="sb-sidenav-footer">
+          <div class="small">Авторизован как:</div>
+          Администратор
+        </div>
+      </nav>
+    </div>
+
+    {{! Content }}
+    <div id="layoutSidenav_content">
+      <main>
+        <div class="container-fluid px-4">
+          {{> (pagePath)}}
+        </div>
+      </main>
+
+      {{!-- Footer --}}
+      <footer class="py-1 bg-light mt-auto" style="height: 69px;">
+        <div class="container-fluid px-4 h-100">
+          <div class="d-flex h-100 align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; NTE KG 2021 - {{nowYear}}</div>
+            <div>
+              <a href="/">
+                <img src="assets/icons/NTE-header-logo.svg" alt="NTE kg logo" class="logo h-100">
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  const deleteButton = document.querySelectorAll('#delete-button');
+  const editButton = document.querySelectorAll('#edit-button');
+  const allUpdateForm = document.querySelectorAll('#updateForm');
+
+  editButton.forEach(item => {
+    item.addEventListener('click', () => {
+      const parentBlock = item.parentElement.parentElement;
+      const updateForm = parentBlock.querySelector('#updateForm');
+      updateForm.classList.toggle('d-none');
+
+      updateForm.addEventListener('click', () => {
+        event.stopPropagation();
+      })
+
+      event.stopPropagation();
+    })
+  })
+
+  window.addEventListener('click', () => {
+    allUpdateForm.forEach(item => {
+      if(!item.classList.contains('d-none')){
+        item.classList.add('d-none')
+      }
+    })
+  })
+
+  deleteButton.forEach(item => {
+    item.addEventListener('click', () => {
+
+    const id = item.getAttribute('data-id');
+
+    const urlSearchParam = (param) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    if (confirm("Вы хотите удалить этот документ?")) {
+      fetch(`/${urlSearchParam('pageName')}/delete-object?id=${id}`, { method: 'POST' })
+
+      alert('ОбЪект удален!');
+      location.reload();
+    }
+    }) 
+  })
+
+
+  const textArea = document.querySelectorAll('.text-area');
+	textArea.forEach(item => {
+		item.textContent = item.textContent.replace(/ +/g, ' ')
+	})
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="assets/js/dashboard.js"></script>

@@ -1,8 +1,36 @@
 const fs = require("fs"),
-  path = require("path");
+  path = require("path"),
+  url = require("url"),
+  { Employee, Contacts, Car, Motorcycle } = require("../models/contentModels");
 
 const localJson = fs.readFileSync(path.resolve(__dirname, "../dist/data.json")),
   data = JSON.parse(localJson);
+
+const globalHelpers = (req) => {
+  return {
+    changeLang: (text) => {
+      let browserLang = req.acceptsLanguages("en", "ru"),
+      	language = text.en;
+				urlParse = url.parse(req.url, true)
+
+			const checkLang = (item) => {
+				if (item === "ru") {
+					language = text.ru;
+				} else if (item === "en") {
+					language = text.en;
+				}else {
+					language = text.en;
+				}
+			}
+
+			req.url.includes(urlParse.search)
+				?checkLang(req.query.lang)
+				:checkLang(browserLang);
+      
+      return language;
+    },
+  };
+};
 
 module.exports = (app) => {
   const homePageData = data.homePage;
@@ -15,31 +43,45 @@ module.exports = (app) => {
     });
   });
 
-  app.get("/about-us", (req, res) => {
+  app.get("/about-us", async (req, res) => {
+    const emploees = await Employee.find().lean();
     res.render("pages/aboutUs", {
       title: "About us",
       isaboutUs: true,
+      emploees,
+      helpers: globalHelpers(req),
     });
   });
 
-  app.get("/contacts", (req, res) => {
+  app.get("/contacts", async (req, res) => {
+		let contacts = await Contacts.find().lean();
+    contacts = contacts[0];
+
     res.render("pages/contacts", {
       title: "Contacts",
       isContacts: true,
+			contacts,
+			helpers: globalHelpers(req),
     });
   });
 
-  app.get("/Off-road-motorcycles", (req, res) => {
+  app.get("/Off-road-motorcycles", async (req, res) => {
+    const motorcycles = await Motorcycle.find().lean();
     res.render("pages/motorcycles", {
       title: "Off-road motorcycles",
       isMotorcycles: true,
+      motorcycles,
+      helpers: globalHelpers(req),
     });
   });
 
-  app.get("/off-road-cars", (req, res) => {
+  app.get("/off-road-cars", async (req, res) => {
+    const cars = await Car.find().lean();
     res.render("pages/cars", {
       title: "Off-road cars",
       isCars: true,
+      cars,
+      helpers: globalHelpers(req),
     });
   });
 
@@ -163,12 +205,11 @@ module.exports = (app) => {
     res.render("pages/about-countries/about-kyrgyzstan", {
       title: "About-kyrgyzstan",
       isAboutKyrgyzstan: true,
-      aboutKyrgyzstanData
+      aboutKyrgyzstanData,
     });
   });
 
-
   app.use((req, res, next) => {
-    res.status(404).render("pages/error404")
+    res.status(404).render("pages/error404");
   });
 };

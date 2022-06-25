@@ -14,7 +14,8 @@ module.exports = {
   },
   entry: {
     lang: `${Paths.src}/js/lang.js`,
-    app: `${Paths.src}/js/main.js`
+    app: `${Paths.src}/js/main.js`,
+    dashboard: `${Paths.src}/js/dashboard.js`
   },
   output: {
     filename: `${Paths.assets}js/[name].js`,

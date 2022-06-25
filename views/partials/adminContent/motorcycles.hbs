@@ -1,0 +1,209 @@
+<h1 class="mt-4">Мотоциклы</h1>
+
+<section class="my-5">
+  <h5>Список внедорожников</h5>
+  {{#if motorcycles.length}}
+    {{#each motorcycles}}
+      <div class="row g-3 shadow-sm emloyee-card my-3 overflow-hidden mx-auto">
+        <div class="emloyee-img mt-0 col-sm-3 text-center">
+          <img
+            src="assets/img/{{checkString
+              loadedImage
+              'of-road/motocycle.png'
+            }}"
+            alt="off road motorcycle"
+            class="mh-100 mw-100"
+          />
+        </div>
+        <div class="col-sm-8">
+          <p class="mb-1"><strong>Название:</strong> {{motorcycleName.ru}}</p>
+          <p class="mb-1"><strong>Описание:</strong></p>
+          <pre class="mb-1" style="white-space: pre-line;">{{motorcycleDescription.ru}}</pre>
+          <p class="mb-1"><strong>Создан:</strong> {{creationTime}}</p>
+        </div>
+        <div
+          class="col d-flex flex-column align-items-center justify-content-evenly"
+        >
+          <a class="text-dark" id="delete-button" data-id="{{_id}}">
+            <span class="cursor-pointer" title="Удалить"><i
+                class="fas fa-trash-alt"
+              ></i></span>
+          </a>
+          <a class="text-dark" id="edit-button" data-id="{{_id}}">
+            <span class="cursor-pointer" title="Изменить"><i
+                class="fas fa-user-edit"
+              ></i></span>
+          </a>
+        </div>
+
+        <div id="updateForm" class="col-12 p-4 d-none">
+          <h5>Изменить</h5>
+          <form
+            action="/motorcycles/update-object?id={{_id}}"
+            enctype="multipart/form-data"
+            method="POST"
+            style="max-width: 800px;"
+          >
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <p class="mb-1">Описания на русском</p>
+                <div class="">
+                  <input
+                    type="text"
+                    name="motorcycle_name_ru"
+                    class="form-control"
+                    placeholder="Имя"
+										value="{{motorcycleName.ru}}"
+                    aria-label="Name"
+                    required
+                  />
+                </div>
+                <div class="mt-4">
+                  <textarea
+                    name="motorcycle_description_ru"
+                    class="text-area form-control"
+                    placeholder="Текст"
+                    id="floatingTextarea1"
+                    rows="7"
+										required
+                  >{{motorcycleDescription.ru}}</textarea>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <p class="mb-1">Перевод на английский</p>
+                <div class="">
+                  <input
+                    type="text"
+                    name="motorcycle_name_en"
+                    class="form-control"
+										value="{{motorcycleName.en}}"
+                    placeholder="Name"
+                    aria-label="Name"
+                    required
+                  />
+                </div>
+                <div class="mt-4">
+                  <textarea
+                    name="motorcycle_description_en"
+                    class="text-area form-control"
+                    placeholder="Text"
+                    id="floatingTextarea2"
+                    rows="7"
+										required
+                  >{{motorcycleDescription.en}}</textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-2">
+              <div class="col-sm-9 mt-0">
+                <input
+                  class="form-control"
+                  type="file"
+                  name="motorcycle_img"
+                  id="formFile"
+                  accept=".jpg, .png, .jpeg"
+                />
+              </div>
+
+              <div class="col-sm-3 mt-0">
+                <button
+                  type="submit"
+                  class="btn btn-primary w-100"
+                >Изменить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <h6>Мотоциклов нет.</h6>
+  {{/if}}
+</section>
+
+<section class="my-5">
+  <h5>Добавить мотоцикл</h5>
+  <form
+    action="/add_motorcycle"
+    enctype="multipart/form-data"
+    method="POST"
+    style="max-width: 800px;"
+  >
+
+    <div class="row g-3">
+      <div class="col-sm-6">
+        <p class="mb-1">Описания на русском</p>
+        <div class="">
+          <input
+            type="text"
+            name="motorcycle_name_ru"
+            class="form-control"
+            placeholder="Имя"
+            aria-label="Name"
+            required
+          />
+        </div>
+        <div class="mt-4">
+          <textarea
+            name="motorcycle_description_ru"
+            class="form-control"
+            placeholder="Текст"
+            id="floatingTextarea1"
+            rows="7"
+						required
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <p class="mb-1">Перевод на английский</p>
+        <div class="">
+          <input
+            type="text"
+            name="motorcycle_name_en"
+            class="form-control"
+            placeholder="Name"
+            aria-label="Name"
+            required
+          />
+        </div>
+        <div class="mt-4">
+          <textarea
+            name="motorcycle_description_en"
+            class="form-control"
+            placeholder="Text"
+            id="floatingTextarea2"
+            rows="7"
+						required
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-2">
+      <label for="formFile" class="form-label mb-0">
+        <div class="alert alert-info mb-1 py-1" role="alert">
+          <i class="fas fa-info"></i>
+          | Размер не более 800х600
+        </div>
+      </label>
+      <div class="col-sm-9 mt-0">
+        <input
+          class="form-control"
+          type="file"
+          name="motorcycle_img"
+          id="formFile"
+          accept=".jpg, .png, .jpeg"
+        />
+      </div>
+
+      {{! Add button }}
+      <div class="col-sm-3 mt-0">
+        <button type="submit" class="btn btn-primary w-100">Создать</button>
+      </div>
+    </div>
+  </form>
+</section>

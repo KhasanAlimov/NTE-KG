@@ -8,6 +8,11 @@ const elems = (selector) => {
     return document.querySelectorAll(selector);
 };
 
+const urlSearchParam = (param) => {
+	const urlParams = new URLSearchParams(window.location.search);
+	return urlParams.get(param);
+}
+
 const language = {
     en: {
         aboutUs: "About us",
@@ -41,12 +46,8 @@ const language = {
         aboutTajikistan: "About Tajikistan",
         aboutMongolia: "About Mongolia",
         aboutChina: "About China",
-        info: "Info",
-        phone: "Phone: +996555550146 ",
-        addressOshKyrgyzstan: "Address: Osh, Kyrgyzstan",
-        index: "Index: 723500 ",
         ourPartners: "Our partners",
-        allRightsReserved: "Copyright© 2021 Nte All Rights Reserved",
+        allRightsReserved: "All Rights Reserved",
         // About Kyrgyzstan
         aboutKyrgyzstanPH1: "Kyrgyzstan is a mountainous country in Central Asia. It is located along the Great Silk Road, an ancient trade route between China and the Mediterranean. Snow leopards, lynxes and sheep inhabit the Tien Shan Mountains, which surround this caravan route and occupy most of the country. In the south of the country, there is the city of Osh, which has a history of more than a thousand years. It is famous for its huge bazaar, where merchants who followed the Great Silk Road once stayed.",
         aboutKyrgyzstanPH2: "Kyrgyzstan (General information)",
@@ -118,66 +119,21 @@ const language = {
         offRoadMotorcyclesP2: "Without a doubt, this is one of the most versatile motorcycles ever made. It is durable. It looks great. A reliable air-cooled, 4-stroke 595cc engine powers the XT600. The 4-valve system and the clever YDIS carburetor block give the bike high torque and smooth, powerful acceleration in any frequency range, which gives it an advantage both on and off the road. The electric starter allows the motorcycle to be started at the push of a button. The robust front suspension includes all dimension changes made in 1996 to improve the stability of the motorcycle when traveling at high speed.",
         // Off-road cars
         offRoadCarsPH1: "quality and reliability begin with us.",
-        offRoadCarsP1: "toyota land cruiser 105",
-        offRoadCarsP2: "The car is very comfortable, capable of overcoming such obstacles and places where, it would seem, it is already impossible to pass. Not killed in the literal sense of the word 'not split' bridges give the car a sense of the presence of 'independent' suspension. Smooth when accelerating and stable on the road. Sometimes it seems that it is very slow, but remembering that this is not a racing car, but an SUV and its weight is huge, you calm down and feel confident. Especially when it comes to a country road and a country road.",
-        offRoadCarsP3: "Toyota Land cruiser 76",
-        offRoadCarsP4:`Toyota Land cruiser 76 
-Engine volume: 4.2 Fuel 
-type: Diesel Transmission: Manual 
-Drive unit: Full (4WD) 
-Fuel consumption: (urban) L / 100 km 19.9L 
-Fuel consumption: (extra-urban) 10.2L 
-Fuel consumption: (combined) 11.9L 
-Fuel tank volume: 100L`,
-        offRoadCarsP5: "Toyota Land cruiser 78",
-        offRoadCarsP6:`Toyota Land cruiser 78
-Engine volume: 4.2
-Fuel type: Diesel
-Transmission: Manual
-Drive unit: Full (4WD)
-Fuel consumption: (urban) L / 100 km
-19.9L Fuel consumption: (extra-urban)
-10.2L
-Fuel consumption: (combined) 11.9L
-Fuel tank volume: 100L`,
-        offRoadCarsP7: "toyota raf 4",
-        offRoadCarsP8:`Toyota RAV4
-Engine volume: 2.0
-Fuel type: Petrol
-Transmission: Manual
-Drive unit: 4WD
-Fuel consumption: (urban) L / 100 km
-12L Fuel consumption: (extra-urban)
-9L
-Fuel consumption: (combined) 10L
-Fuel tank volume: 70L`,
-        offRoadCarsP9: "Mitsubishi Montero Sport",
-        offRoadCarsP10:`
-Mitsubishi Montero Sport
-Engine volume: 3.5
-Fuel type: Petrol
-Transmission: Automatic
-Drive unit: Full(4WD)
-Fuel consumption: (urban) L / 100 km
-15L Fuel consumption: (extra-urban)
-11L
-Fuel consumption: (combined) 13L
-Fuel tank volume: 90L`,
 //Tours
         uniqueSensationsAwaitYou: "unique sensations await you",
-        silkRoadTour: "SILK ROAD TOUR (MAY 2022)",
+        silkRoadTour: "SILK ROAD TOUR MAY",
         silkRoadTour2: "02 MAY - 01 JUNE 2022",
-        pamirTour: "PAMIR TOUR (MAY / JUNE 2022)",
+        pamirTour: "PAMIR TOUR MAY / JUNE",
         pamirTour2: "29 MAY - 11 JUNE 2022",
-        mongoliaTour: "MONGOLIA TOUR 2022",
+        mongoliaTour: "MONGOLIA TOUR",
         mongoliaTour2: "JULY 10 - AUGUST 1, 2022",
-        narynTour: "NARYN TOUR (JULY 2022)",
+        narynTour: "NARYN TOUR JULY",
         narynTour2: "03 - 09 JULY 2022",
-        bartangTour: "BARTANG TOUR 2022",
+        bartangTour: "BARTANG TOUR",
         bartangTour2: "04 - 17 SEPTEMBER 2022",
-        tosorTour: "TOSOR TOUR (AUGUST 2022)",
+        tosorTour: "TOSOR TOUR AUGUST",
         tosorTour2: "14 - 27 AUGUST 2022",
-        tyanShanTour: "TYAN-SHAN TOUR (JUNE 2022)",
+        tyanShanTour: "TYAN-SHAN TOUR JUNE",
         tyanShanTour2: "05 - 18 JUNE 2022",
         learnMore: "learn more",
 //Silk road tour
@@ -299,22 +255,8 @@ Fuel tank volume: 90L`,
         aboutUsP7: "To make you feel the whole nature of Kyrgyzstan",
         aboutUsP8: "Reach worthy heights",
         ourTeam: "our team",
-        aboutUsP9: "Shohrux",
-        aboutUsP10: "(Manager)",
-        aboutUsP11: "Kamil",
-        aboutUsP12: "(Mechanic)",
-        aboutUsP13: "Kolya",
-        aboutUsP14: " (Mechanic)",
-        aboutUsP15: "Nafisa",
-        aboutUsP16: "(chief accountant)",
         // Contacts
         contactDescription: "contact description",
-        contactsAddress:`Address: Osh, Kyrgyzstan
-Besh Kapa Street-101, 14
-Osh postal code – 723500
-Tel: +996555550146
-WhatsApp: +996556356666
-Email: naturetravel.osh@gmail.com`,
         // Tires
         description: "DESCRIPTION",
         tiresShinko: "shinko",
@@ -367,13 +309,9 @@ Email: naturetravel.osh@gmail.com`,
         aboutTajikistan: "О Таджикистане",
         aboutMongolia: "О Монголии",
         aboutChina: "О Китае",
-        info: "Инфо",
-        phone: "Телефон: +996555550146 ",
-        addressOshKyrgyzstan: "Адрес: Ош, Кыргызстан",
-        index: "Индекс: 723500",
         oilChange: "Замена масла",
         ourPartners: "Наши партнеры",
-        allRightsReserved: " Copyright© 2021 Nte Все права защищены",
+        allRightsReserved: "Все права защищены",
 // About Kyrgyzstan
         aboutKyrgyzstanPH1: "Кыргызстан - горная страна в Центральной Азии. Он расположен вдоль Великого шелкового пути, древнего торгового пути между Китаем и Средиземным морем. Снежные барсы, рыси и овцы обитают в горах Тянь-Шаня, которые окружают этот караванный путь и занимают большую часть страны. На юге страны находится город Ош, история которого насчитывает более тысячи лет. Он знаменит своим огромным базаром, где когда-то останавливались купцы, следовавшие по Великому шелковому пути.",
         aboutKyrgyzstanPH2: "Кыргызстан (Общая информация)",
@@ -444,67 +382,21 @@ Email: naturetravel.osh@gmail.com`,
         offRoadMotorcyclesP2: "Без сомнения, это один из самых универсальных мотоциклов из когда-либо созданных. Он прочный. Это выглядит здорово. XT600 оснащен надежным 4-тактным двигателем объемом 595 куб. См с воздушным охлаждением. 4-клапанная система и продуманный карбюраторный блок YDIS придают байку высокий крутящий момент и плавное, мощное ускорение в любом частотном диапазоне, что дает ему преимущество как на дороге, так и вне ее. Электрический стартер позволяет запускать мотоцикл одним нажатием кнопки. Прочная передняя подвеска включает в себя все изменения размеров, внесенные в 1996 году для повышения устойчивости мотоцикла при движении на высокой скорости.",
 //Off-road cars
         offRoadCarsPH1: "качество и надежность начинаются с нас.",
-        offRoadCarsP1: "Тойота Ленд Крузер 105",
-        offRoadCarsP2: "Автомобиль очень комфортный, способен преодолевать такие препятствия и места, где, казалось бы, проехать уже невозможно. Неубитые в прямом смысле слова «неразрезные» мосты придают автомобилю ощущение наличия «независимой» подвески. Плавный при разгоне и стабильный на дороге. Иногда кажется, что он очень медленный, но, вспомнив, что это не гоночная машина, а внедорожник и его вес огромен, успокаиваешься и чувствуешь себя уверенно. Особенно если речь идет о проселочной дороге и проселочной дороге.",
-        offRoadCarsP3: "Тойота Ленд Крузер 76",
-        offRoadCarsP4:`Тойота Ленд Крузер 76
-Объем двигателя: 4.2
-Тип топлива: Дизель
-Трансмиссия: Механическая
-Привод: Полный (4WD)
-Расход топлива: (городской) л / 100 км
-19,9л Расход топлива: (загородный)
-10,2л
-Расход топлива: (смешанный) 11.9л
-Объем топливного бака: 100л`,
-        offRoadCarsP5: "Тойота Ленд Крузер 78",
-        offRoadCarsP6:`Тойота Ленд Крузер 78
-Объем двигателя: 4.2
-Тип топлива: Дизель
-Трансмиссия: Механическая
-Привод: Полный (4WD)
-Расход топлива: (городской) л / 100 км
-19,9л Расход топлива: (загородный)
-10,2л
-Расход топлива: (смешанный) 11.9л
-Объем топливного бака: 100л`,
-        offRoadCarsP7: " Тойота рав4",
-        offRoadCarsP8:`Тойота рав4
-Объем двигателя: 2.0
-Тип топлива: Бензин
-Трансмиссия: Механическая
-Привод: Полный (4WD)
-Расход топлива: (городской) л / 100 км
-12л Расход топлива: (загородный)
-9л
-Расход топлива: (смешанный) 10л
-Объем топливного бака: 70л`,
-        offRoadCarsP9: "Митсубиси Монтеро Спорт",
-        offRoadCarsP10:`Митсубиси Монтеро Спорт
-Объем двигателя: 3.5
-Тип топлива: Бензин
-Трансмиссия: Автоматический
-Привод: Полный (4WD)
-Расход топлива: (городской) л / 100 км
-15л Расход топлива: (загородный)
-11л
-Расход топлива: (смешанный) 13л
-Объем топливного бака: 90л`,
 // Tours
         uniqueSensationsAwaitYou: "вас ждут неповторимые ощущения",
-        silkRoadTour: "Шелковый путь тур (май 2022)",
+        silkRoadTour: "Шелковый путь тур май",
         silkRoadTour2: "02 май - 01 июнь 2022",
-        pamirTour: "Памир тур (май / июнь 2022)",
+        pamirTour: "Памир тур май / июнь",
         pamirTour2: "29 май - 11 июнь 2022",
-        mongoliaTour: "Монголия тур 2022",
+        mongoliaTour: "Монголия тур",
         mongoliaTour2: "Июль 10 - август 1, 2022",
-        narynTour: "Нарын тур (Июль 2022)",
+        narynTour: "Нарын тур Июль",
         narynTour2: "03 - 09 Июль 2022",
-        bartangTour: "Бартанг тур 2022",
+        bartangTour: "Бартанг тур",
         bartangTour2: "04 - 17 SEPTEMBER 2022",
-        tosorTour: "Тосор тур (август 2022)",
+        tosorTour: "Тосор тур август",
         tosorTour2: "14 - 27 август 2022",
-        tyanShanTour: "Тянь-Шань тур (июнь 2022)",
+        tyanShanTour: "Тянь-Шань тур июнь",
         tyanShanTour2: "05 - 18 июнь 2022",
         learnMore: "Узнать больше",
 //Silk road tour
@@ -618,28 +510,14 @@ Email: naturetravel.osh@gmail.com`,
         aboutUsP1: "Компания Nature Travel and Engineering имеет более чем 20-летний опыт работы на рынке. Мы предоставляем надежный, безопасный и качественный сервис. Единственное место, где вы можете починить или улучшить свой мотоцикл, автомобиль, любой вид транспорта, доверяя лучшим механикам в этой области. Также вы без труда сможете арендовать автомобиль или мотоцикл.",
         aboutUsP2: "Мы сотрудничаем со швейцарской туристической компанией Alatoo-Moto, которая предлагает удивительные приключенческие туры по Средней Азии.",
         aboutUsP3: "Наша цель",
-        aboutUsP4: "• Создать комфорт",
-        aboutUsP5: "• Подарить незабываемые ощущения",
-        aboutUsP6: "• Обеспечение безопасности",
-        aboutUsP7: "• Чтобы вы почувствовали всю природу Кыргызстана",
-        aboutUsP8: "• Достичь достойных высот",
+        aboutUsP4: "Создать комфорт",
+        aboutUsP5: "Подарить незабываемые ощущения",
+        aboutUsP6: "Обеспечение безопасности",
+        aboutUsP7: "Чтобы вы почувствовали всю природу Кыргызстана",
+        aboutUsP8: "Достичь достойных высот",
         ourTeam: "Наша команда",
-        aboutUsP9: "Шохрух",
-        aboutUsP10: "(Менеджер)",
-        aboutUsP11: "Камил",
-        aboutUsP12: "(Механик)",
-        aboutUsP13: "Коля",
-        aboutUsP14: "(Механик)",
-        aboutUsP15: "Нафиса",
-        aboutUsP16: "(Главный Бухгалтер)",
 //Contacts
         contactDescription: "описание контакта",
-        contactsAddress:`Адрес: Ош, Кыргызстан
-Беш Капа Улица -101, 14
-Почтовый индекс Ош - 723500
-Тел: : +996555550146
-WhatsApp: +996556356666
-Email: naturetravel.osh@gmail.com`,
 //Tires
         description: "Описание",
         tiresShinko: "Шинко",
@@ -681,8 +559,7 @@ selectLang.addEventListener('click', (e) => {
 
   e.target.classList.contains('selected')
    ? ''
-   :(location.href = window.location.pathname + "#" + langUrlKey,
-    location.reload());
+   :(location.href = window.location.pathname + "?lang=" + langUrlKey);
 
   
 });
@@ -709,6 +586,7 @@ function defaultPageLang() {
     const availableLangs = Object.keys(language);
 
     let userLang = navigator.language || navigator.userLanguage;
+
     userLang = userLang.split("-")[0];
 
     !availableLangs.includes(userLang)
@@ -716,17 +594,18 @@ function defaultPageLang() {
         : (changePageLang(userLang), activatedLang(userLang));
 }
 
-defaultPageLang();
-
-
 // Изменение при выборе языка
 const selectLangChange = () => {
-    const hashKey = window.location.hash;
-    const hashLang = hashKey.slice(1);
+    const hashKey = window.location.search;
+    const hashLang = urlSearchParam('lang');
 
     !hashKey
         ? ''
         : (changePageLang(hashLang), activatedLang(hashLang));
 };
 
-selectLangChange()
+window.addEventListener('load', () => {
+	
+	defaultPageLang();
+	selectLangChange();
+})

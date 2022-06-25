@@ -1,0 +1,203 @@
+
+<h1 class="mt-4">О нас</h1>
+
+<section class="my-5">
+  <h5>Список сотрудников</h5>
+  {{#if emploees.length}}
+    {{#each emploees}}
+      <div class="row g-3 shadow-sm emloyee-card my-3 overflow-hidden mx-auto">
+        <div class="emloyee-img mt-0 col-sm-3 text-center">
+          <img
+            src="assets/img/{{checkString loadedImage "About-us/Avatar.png" }}"
+            alt="avatar"
+            class="mh-100 mw-100"
+          />
+        </div>
+        <div class="col-sm-8">
+          <p class="mb-1"><strong>Имя:</strong> {{employeeName.ru}}</p>
+          <p class="mb-1"><strong>Должность:</strong> {{employeePosition.ru}}</p>
+          <p class="mb-1"><strong>Создан:</strong> {{creationTime}}</p>
+        </div>
+        <div
+          class="col d-flex flex-column align-items-center justify-content-evenly"
+        >
+          <a class="text-dark" id="delete-button" data-id="{{_id}}">
+            <span class="cursor-pointer" title="Удалить"><i
+                class="fas fa-trash-alt"
+              ></i></span>
+          </a>
+          <a class="text-dark" id="edit-button" data-id="{{_id}}">
+            <span class="cursor-pointer" title="Изменить"><i
+                class="fas fa-user-edit"
+              ></i></span>
+          </a>
+        </div>
+
+        {{!-- Update form --}}
+        <div id="updateForm" class="col-12 p-4 d-none">
+          <h5>Изменить</h5>
+          <form
+            action="aboutUs/update-object?id={{_id}}"
+            enctype="multipart/form-data"
+            method="POST"
+            style="max-width: 500px;"
+          >
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  name="employee_name"
+                  class="form-control"
+                  value="{{employeeName.ru}}"
+                  placeholder="Имя"
+                  aria-label="Name"
+                  required
+                />
+              </div>
+              <div class="col-sm-6">
+                <input
+                  type="text"
+                  name="employee_position"
+                  class="form-control"
+                  value="{{employeePosition.ru}}"
+                  placeholder="Должность"
+                  aria-label="Position"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row g-3 mt-0">
+              <div class="col-12">
+                Перевод на английский
+              </div>
+              <div class="col-sm-6 mt-0">
+                <input
+                  type="text"
+                  name="employee_name_en"
+                  value="{{employeeName.en}}"
+                  class="form-control"
+                  placeholder="Name"
+                  aria-label="Name"
+                  required
+                />
+              </div>
+              <div class="col-sm-6 mt-0">
+                <input
+                  type="text"
+                  name="employee_position_en"
+                  value="{{employeePosition.en}}"
+                  class="form-control"
+                  placeholder="Position"
+                  aria-label="Position"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row g-3 mt-2">
+              <div class="col-sm-9 mt-0">
+                <input
+                  class="form-control"
+                  type="file"
+                  name="employee_img"
+                  id="formFile"
+                  accept=".jpg, .png, .jpeg"
+                />
+              </div>
+
+              {{! Add button }}
+              <div class="col-sm-3 mt-0">
+                <button type="submit" class="btn btn-primary w-100">Изменить</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <h6>Сотрудников нет.</h6>
+  {{/if}}
+</section>
+
+<section class="my-5">
+  <h5>Добавить сотрудника</h5>
+  <form
+    action="/create_employee"
+    enctype="multipart/form-data"
+    method="POST"
+    style="max-width: 600px;"
+  >
+    <div class="row g-3">
+      <div class="col-sm-6">
+        <input
+          type="text"
+          name="employee_name"
+          class="form-control"
+          placeholder="Имя"
+          aria-label="Name"
+          required
+        />
+      </div>
+      <div class="col-sm-6">
+        <input
+          type="text"
+          name="employee_position"
+          class="form-control"
+          placeholder="Должность"
+          aria-label="Position"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row g-3 mt-0">
+      <div class="col-12">
+        Перевод на английский
+      </div>
+      <div class="col-sm-6 mt-0">
+        <input
+          type="text"
+          name="employee_name_en"
+          class="form-control"
+          placeholder="Name"
+          aria-label="Name"
+          required
+        />
+      </div>
+      <div class="col-sm-6 mt-0">
+        <input
+          type="text"
+          name="employee_position_en"
+          class="form-control"
+          placeholder="Position"
+          aria-label="Position"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row g-3 mt-2">
+      <label for="formFile" class="form-label mb-0">
+        <div class="alert alert-info mb-1 py-1" role="alert">
+          <i class="fas fa-info"></i>
+          | Размер не более 300х300
+        </div>
+      </label>
+      <div class="col-sm-9 mt-0">
+        <input
+          class="form-control"
+          type="file"
+          name="employee_img"
+          id="formFile"
+          accept=".jpg, .png, .jpeg"
+        />
+      </div>
+
+      {{! Add button }}
+      <div class="col-sm-3 mt-0">
+        <button type="submit" class="btn btn-primary w-100">Создать</button>
+      </div>
+    </div>
+  </form>
+</section>
